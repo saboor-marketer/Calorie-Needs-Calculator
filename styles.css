@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.calculator-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #667eea;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-select,
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.btn-secondary {
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.results-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.results-section.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.results-section h2 {
+    color: #667eea;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.result-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+}
+
+.result-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.result-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.bmr-card {
+    border-left: 5px solid #667eea;
+}
+
+.bmr-card .result-value {
+    color: #667eea;
+}
+
+.maintenance-card {
+    border-left: 5px solid #28a745;
+}
+
+.maintenance-card .result-value {
+    color: #28a745;
+}
+
+.loss-card {
+    border-left: 5px solid #ffc107;
+}
+
+.loss-card .result-value {
+    color: #ffc107;
+}
+
+.gain-card {
+    border-left: 5px solid #dc3545;
+}
+
+.gain-card .result-value {
+    color: #dc3545;
+}
+
+@media (max-width: 576px) {
+    .calculator-card {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .result-value {
+        font-size: 1.5rem;
+    }
+}
